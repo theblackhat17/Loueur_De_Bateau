@@ -4,7 +4,7 @@ class BateauAVoile : Bateau
 {
     public BateauAVoile()
     {
-        CapaciteMax = 4; // Exemple de capacité
+        CapaciteMax = 4;
         Inventaire = new List<string> { "voiles", "cordes", "boussole" };
     }
 

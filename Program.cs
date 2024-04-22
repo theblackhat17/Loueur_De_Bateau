@@ -43,12 +43,10 @@ class Program
             Console.WriteLine($"Le prix total de la location est maintenant de {bateau.CalculerPrixTotal()}€.");
         }
 
-        // Suggérer un itinéraire basé sur le choix du bateau
         Itineraire itineraire = bateau.SuggérerItinéraire();
         Console.WriteLine($"Itinéraire suggéré: {itineraire.Description}");
         Console.WriteLine("Lieux : " + string.Join(", ", itineraire.PointsInteret));
 
-        // Simulation de la fin de l'excursion
         Console.WriteLine("Avez-vous terminé votre excursion et tout aimé ? (O/N)");
         if (Console.ReadLine().ToUpper() == "O")
         {
@@ -58,7 +56,7 @@ class Program
         }
 
         Console.WriteLine("Bateau de retour. Vérification de l'inventaire...");
-        List<string> inventaireRetour = bateau.Inventaire; // Supposons que l'utilisateur retourne tout l'inventaire pour simplifier
+        List<string> inventaireRetour = bateau.Inventaire;
         if (bateau.VerifierInventaire(inventaireRetour))
         {
             Console.WriteLine("L'inventaire est complet.");

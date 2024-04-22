@@ -16,7 +16,7 @@ abstract class Bateau
 
     public decimal CalculerPrixTotal()
     {
-        decimal prixBase = 100; // Prix de base de la location, ajustez selon vos besoins
+        decimal prixBase = 100;
         return prixBase + EquipementsSupplementaires.Sum(e => e.Prix);
     }
 
